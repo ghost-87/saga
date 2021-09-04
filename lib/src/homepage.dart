@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:saga/src/epub_view_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -223,6 +224,10 @@ class _HomePageState extends State<HomePage> {
               InkWell(
                 onTap: () {
                   print(' 1111111111111111111');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EPubViewPage()),
+                  );
                 },
                 child: Text('Summary'),
               ),
